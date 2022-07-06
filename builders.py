@@ -7,7 +7,7 @@ def get_android_api(env):
 
 
 def get_deps_dir(env):
-    return env.Dir("#deps").abspath
+    return os.path.dirname(os.path.abspath(__file__)) + "/deps"
 
 
 def get_deps_build_dir(env):

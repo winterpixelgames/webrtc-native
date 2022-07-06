@@ -28,8 +28,8 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                */
 /*************************************************************************/
 
-#ifndef WEBRTC_DATA_CHANNEL_H
-#define WEBRTC_DATA_CHANNEL_H
+#ifndef WEBRTC_LIB_DATA_CHANNEL_H
+#define WEBRTC_LIB_DATA_CHANNEL_H
 
 #ifdef GDNATIVE_WEBRTC
 #include <Godot.hpp> // Godot.hpp must go first, or windows builds breaks
@@ -39,6 +39,9 @@
 #if !defined(GDCLASS)
 #define GDCLASS(arg1, arg2) GODOT_CLASS(arg1, arg2)
 #endif
+#elif WEBRTCNATIVE_MODULE
+#define WebRTCDataChannelExtension WebRTCDataChannel
+#include <godot/modules/webrtc/webrtc_data_channel.h>
 #else
 #include <godot_cpp/classes/web_rtc_data_channel_extension.hpp>
 #endif

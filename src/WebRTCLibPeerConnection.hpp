@@ -28,8 +28,8 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                */
 /*************************************************************************/
 
-#ifndef WEBRTC_PEER_H
-#define WEBRTC_PEER_H
+#ifndef WEBRTC_LIB_PEER_H
+#define WEBRTC_LIB_PEER_H
 
 #ifdef GDNATIVE_WEBRTC
 #include <Godot.hpp> // Godot.hpp must go first, or windows builds breaks
@@ -39,6 +39,9 @@
 #if !defined(GDCLASS)
 #define GDCLASS(arg1, arg2) GODOT_CLASS(arg1, arg2)
 #endif
+#elif WEBRTCNATIVE_MODULE
+#define WebRTCPeerConnectionExtension WebRTCPeerConnection
+#include <godot/modules/webrtc/webrtc_peer_connection.h>
 #else
 #include <godot_cpp/classes/web_rtc_peer_connection_extension.hpp>
 #endif
